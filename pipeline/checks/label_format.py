@@ -25,5 +25,47 @@ from ..common import ERROR, WARN, Issue, iou_xywh, parse_yolo_line  # noqa: F401
 
 
 def run(ds, cfg):
-    # TODO: duyệt từng file nhãn, từng dòng
-    raise NotImplementedError("check label_format chưa làm")
+    c = cfg["label_format"]
+    n_classes = len(ds.classes)
+    issues = []
+
+    def add(sev, code, stem, msg, line, **extra):
+        issues.append(Issue("label_format", sev, code, stem, msg, line=line, extra=extra))
+
+    for lf in ds.label_files():
+        stem = lf.stem
+        size = None            # chỉ mở ảnh khi thật sự cần (BOX_TINY)
+        size_loaded = False
+        seen = []              # [(id, cx, cy, w, h)] các dòng hợp lệ ĐÃ duyệt, để so trùng
+        for no, ln in ds.read_label_lines(stem) or []:
+            try:
+                cid, x, y, w, h = parse_yolo_line(ln)
+            except ValueError as e:
+                add(ERROR, "BAD_FORMAT", stem, f"dòng không đúng 5 cột số ({e}): {ln.strip()[:60]}", no)
+                continue
+            if not 0 <= cid < n_classes:
+                add(ERROR, "BAD_CLASS_ID", stem, f"id lớp {cid} ngoài 0..{n_classes - 1}", no, class_id=cid)
+                continue
+            if w <= 0 or h <= 0:
+                add(ERROR, "BOX_ZERO", stem, f"box rỗng (w={w}, h={h})", no)
+                continue
+
+            overflow = max(0.0, -(x - w / 2), (x + w / 2) - 1.0, -(y - h / 2), (y + h / 2) - 1.0)
+            if overflow > c["overflow_tol"]:
+                add(ERROR, "BOX_OUT_OF_IMAGE", stem, f"box tràn ảnh {overflow:.4f}", no, overflow=overflow)
+
+            box = (x, y, w, h)
+            if any(p[0] == cid and iou_xywh(p[1:], box) > c["dup_box_iou"] for p in seen):
+                add(ERROR, "DUP_BOX", stem, "box lặp với một dòng trước đó (cùng lớp)", no)
+            seen.append((cid, *box))
+
+            if w * h > c["max_box_frac"]:
+                add(WARN, "BOX_HUGE", stem, f"box chiếm {w * h:.0%} diện tích ảnh", no, frac=w * h)
+
+            if not size_loaded:
+                size, size_loaded = ds.image_size(stem), True
+            if size is not None:
+                short_px = min(w * size[0], h * size[1])
+                if short_px < c["min_box_px"]:
+                    add(WARN, "BOX_TINY", stem, f"cạnh ngắn của box chỉ {short_px:.1f}px", no, short_px=short_px)
+    return issues
