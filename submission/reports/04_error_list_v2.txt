@@ -1,9 +1,9 @@
 # Danh sách lỗi — SAU sửa tự động (v2)
-ảnh đã quét: 205
+ảnh đã quét: 202
 
 label_format -> 10 dòng
 missing_labels -> 21 dòng
-second_opinion -> 243 dòng
+second_opinion -> 123 dòng
 
 [ERROR] MISSING_LABEL_FILE   img_0031  ảnh không có file nhãn
 [ERROR] MISSING_LABEL_FILE   img_0053  ảnh không có file nhãn
@@ -61,34 +61,20 @@ second_opinion -> 243 dòng
 [WARN ] POSSIBLE_FALSE_POS   img_0204.txt:1  box lớp 1 không khớp vật nào model thấy
 [WARN ] POSSIBLE_FALSE_POS   img_0206.txt:1  box lớp 1 không khớp vật nào model thấy
 [WARN ] POSSIBLE_LOOSE_BOX   img_0015  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.34)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0015  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.35)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0018  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.45)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0023  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.40)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0030  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.34)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0036  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.43)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0038  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.40)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0045  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.33)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0045  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.45)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0046  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.38)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0051  box lớp 0 khớp vật nhưng lỏng/lệch (IoU 0.30)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0054  box lớp 0 khớp vật nhưng lỏng/lệch (IoU 0.38)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0058  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.44)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0062  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.47)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0062  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.35)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0063  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.41)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0064  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.45)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0068  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.42)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0069  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.39)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0075  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.32)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0077  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.40)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0081  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.48)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0082  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.48)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0090  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.46)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0091  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.41)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0094  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.39)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0094  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.32)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0096  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.47)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0108  box lớp 2 khớp vật nhưng lỏng/lệch (IoU 0.45)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0119  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.41)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0125  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.42)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0127  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.44)
@@ -98,165 +84,63 @@ second_opinion -> 243 dòng
 [WARN ] POSSIBLE_LOOSE_BOX   img_0171  box lớp 0 khớp vật nhưng lỏng/lệch (IoU 0.43)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0171  box lớp 0 khớp vật nhưng lỏng/lệch (IoU 0.33)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0175  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.42)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0175  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.43)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0179  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.37)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0188  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.50)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0200  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.43)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0210  box lớp 0 khớp vật nhưng lỏng/lệch (IoU 0.48)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0217  box lớp 0 khớp vật nhưng lỏng/lệch (IoU 0.34)
 [WARN ] POSSIBLE_LOOSE_BOX   img_0217  box lớp 0 khớp vật nhưng lỏng/lệch (IoU 0.36)
-[WARN ] POSSIBLE_LOOSE_BOX   img_0223  box lớp 1 khớp vật nhưng lỏng/lệch (IoU 0.46)
 [WARN ] POSSIBLE_MISSING     img_0001  model thấy lớp 1 (conf 0.95) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0001  model thấy lớp 1 (conf 0.42) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0004  model thấy lớp 0 (conf 0.89) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0004  model thấy lớp 0 (conf 0.79) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0005  model thấy lớp 1 (conf 0.30) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0012  model thấy lớp 1 (conf 0.67) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0014  model thấy lớp 1 (conf 0.85) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0019  model thấy lớp 1 (conf 0.46) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0020  model thấy lớp 1 (conf 0.84) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0020  model thấy lớp 1 (conf 0.50) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0020  model thấy lớp 1 (conf 0.46) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0021  model thấy lớp 1 (conf 0.34) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0022  model thấy lớp 0 (conf 0.85) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0024  model thấy lớp 1 (conf 0.56) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0027  model thấy lớp 2 (conf 0.57) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0028  model thấy lớp 1 (conf 0.94) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0030  model thấy lớp 1 (conf 0.69) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0030  model thấy lớp 1 (conf 0.26) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0032  model thấy lớp 1 (conf 0.61) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0032  model thấy lớp 1 (conf 0.40) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0032  model thấy lớp 0 (conf 0.30) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0032  model thấy lớp 1 (conf 0.25) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0037  model thấy lớp 1 (conf 0.32) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0045  model thấy lớp 1 (conf 0.29) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0047  model thấy lớp 1 (conf 0.72) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0050  model thấy lớp 1 (conf 0.93) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0051  model thấy lớp 0 (conf 0.31) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0057  model thấy lớp 1 (conf 0.89) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0058  model thấy lớp 1 (conf 0.73) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0058  model thấy lớp 1 (conf 0.44) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0058  model thấy lớp 1 (conf 0.41) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0058  model thấy lớp 1 (conf 0.33) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0058  model thấy lớp 1 (conf 0.29) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0064  model thấy lớp 0 (conf 0.36) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0065  model thấy lớp 3 (conf 0.94) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0066  model thấy lớp 3 (conf 0.95) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0066  model thấy lớp 1 (conf 0.29) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0067  model thấy lớp 1 (conf 0.84) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0067  model thấy lớp 1 (conf 0.58) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0067  model thấy lớp 1 (conf 0.53) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0067  model thấy lớp 1 (conf 0.37) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0068  model thấy lớp 1 (conf 0.89) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0073  model thấy lớp 3 (conf 0.41) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0078  model thấy lớp 0 (conf 0.85) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0084  model thấy lớp 1 (conf 0.47) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0084  model thấy lớp 1 (conf 0.42) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0084  model thấy lớp 1 (conf 0.25) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0086  model thấy lớp 1 (conf 0.88) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0087  model thấy lớp 1 (conf 0.28) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0091  model thấy lớp 1 (conf 0.38) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0092  model thấy lớp 0 (conf 0.91) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0093  model thấy lớp 1 (conf 0.71) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0094  model thấy lớp 1 (conf 0.49) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0095  model thấy lớp 1 (conf 0.40) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0096  model thấy lớp 1 (conf 0.86) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0099  model thấy lớp 1 (conf 0.88) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0099  model thấy lớp 1 (conf 0.28) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0099  model thấy lớp 1 (conf 0.26) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0100  model thấy lớp 1 (conf 0.62) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0100  model thấy lớp 1 (conf 0.33) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0103  model thấy lớp 1 (conf 0.92) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0104  model thấy lớp 1 (conf 0.93) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0106  model thấy lớp 0 (conf 0.27) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0108  model thấy lớp 2 (conf 0.42) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0114  model thấy lớp 1 (conf 0.45) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0114  model thấy lớp 1 (conf 0.31) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0116  model thấy lớp 1 (conf 0.79) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0116  model thấy lớp 1 (conf 0.31) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0117  model thấy lớp 1 (conf 0.67) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0119  model thấy lớp 1 (conf 0.52) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0119  model thấy lớp 1 (conf 0.32) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0119  model thấy lớp 1 (conf 0.30) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0121  model thấy lớp 1 (conf 0.76) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0124  model thấy lớp 0 (conf 0.28) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0124  model thấy lớp 0 (conf 0.26) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0125  model thấy lớp 1 (conf 0.38) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0125  model thấy lớp 1 (conf 0.35) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0127  model thấy lớp 1 (conf 0.68) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0127  model thấy lớp 1 (conf 0.48) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0127  model thấy lớp 1 (conf 0.46) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0127  model thấy lớp 1 (conf 0.46) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0127  model thấy lớp 1 (conf 0.33) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0127  model thấy lớp 1 (conf 0.28) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0131  model thấy lớp 1 (conf 0.89) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0131  model thấy lớp 1 (conf 0.45) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0133  model thấy lớp 0 (conf 0.56) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0133  model thấy lớp 0 (conf 0.40) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0134  model thấy lớp 1 (conf 0.68) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0134  model thấy lớp 1 (conf 0.55) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0137  model thấy lớp 1 (conf 0.32) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0138  model thấy lớp 1 (conf 0.32) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0142  model thấy lớp 0 (conf 0.30) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0144  model thấy lớp 1 (conf 0.96) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0145  model thấy lớp 1 (conf 0.94) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0147  model thấy lớp 1 (conf 0.78) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0151  model thấy lớp 3 (conf 0.73) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0151  model thấy lớp 1 (conf 0.44) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0151  model thấy lớp 1 (conf 0.35) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0151  model thấy lớp 3 (conf 0.26) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0157  model thấy lớp 1 (conf 0.90) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0159  model thấy lớp 1 (conf 0.93) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 2 (conf 0.78) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 2 (conf 0.47) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 2 (conf 0.43) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 2 (conf 0.38) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 2 (conf 0.33) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 2 (conf 0.33) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 2 (conf 0.33) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 2 (conf 0.31) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 3 (conf 0.30) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 3 (conf 0.27) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0160  model thấy lớp 2 (conf 0.25) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0163  model thấy lớp 2 (conf 0.32) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0164  model thấy lớp 1 (conf 0.78) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0165  model thấy lớp 1 (conf 0.82) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0165  model thấy lớp 1 (conf 0.26) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0178  model thấy lớp 1 (conf 0.93) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0182  model thấy lớp 1 (conf 0.26) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0184  model thấy lớp 1 (conf 0.79) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0185  model thấy lớp 1 (conf 0.51) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0187  model thấy lớp 1 (conf 0.93) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0187  model thấy lớp 1 (conf 0.29) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0188  model thấy lớp 1 (conf 0.58) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0191  model thấy lớp 2 (conf 0.32) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0194  model thấy lớp 0 (conf 0.60) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0195  model thấy lớp 2 (conf 0.50) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0195  model thấy lớp 0 (conf 0.45) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0195  model thấy lớp 2 (conf 0.38) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0195  model thấy lớp 0 (conf 0.38) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0195  model thấy lớp 0 (conf 0.37) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0199  model thấy lớp 1 (conf 0.83) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0199  model thấy lớp 1 (conf 0.57) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0200  model thấy lớp 1 (conf 0.32) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0204  model thấy lớp 1 (conf 0.91) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0205  model thấy lớp 3 (conf 0.39) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0210  model thấy lớp 0 (conf 0.67) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0210  model thấy lớp 0 (conf 0.52) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0210  model thấy lớp 0 (conf 0.27) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0211  model thấy lớp 0 (conf 0.75) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0211  model thấy lớp 0 (conf 0.36) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0215  model thấy lớp 1 (conf 0.94) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0215  model thấy lớp 1 (conf 0.57) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0218  model thấy lớp 1 (conf 0.84) mà nhãn không có box
 [WARN ] POSSIBLE_MISSING     img_0220  model thấy lớp 1 (conf 0.82) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0220  model thấy lớp 0 (conf 0.39) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0220  model thấy lớp 0 (conf 0.38) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0220  model thấy lớp 0 (conf 0.27) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0220  model thấy lớp 0 (conf 0.26) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0224  model thấy lớp 1 (conf 0.42) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0224  model thấy lớp 1 (conf 0.27) mà nhãn không có box
-[WARN ] POSSIBLE_MISSING     img_0224  model thấy lớp 1 (conf 0.27) mà nhãn không có box
 [WARN ] POSSIBLE_WRONG_CLASS img_0019  model nói lớp 0 (conf 0.94), nhãn khác lớp (IoU 0.99)
 [WARN ] POSSIBLE_WRONG_CLASS img_0020  model nói lớp 3 (conf 0.95), nhãn khác lớp (IoU 0.94)
 [WARN ] POSSIBLE_WRONG_CLASS img_0021  model nói lớp 1 (conf 0.93), nhãn khác lớp (IoU 0.97)
@@ -266,13 +150,9 @@ second_opinion -> 243 dòng
 [WARN ] POSSIBLE_WRONG_CLASS img_0071  model nói lớp 1 (conf 0.93), nhãn khác lớp (IoU 0.99)
 [WARN ] POSSIBLE_WRONG_CLASS img_0075  model nói lớp 1 (conf 0.91), nhãn khác lớp (IoU 0.97)
 [WARN ] POSSIBLE_WRONG_CLASS img_0083  model nói lớp 0 (conf 0.69), nhãn khác lớp (IoU 0.95)
-[WARN ] POSSIBLE_WRONG_CLASS img_0092  model nói lớp 2 (conf 0.47), nhãn khác lớp (IoU 0.94)
-[WARN ] POSSIBLE_WRONG_CLASS img_0101  model nói lớp 0 (conf 0.56), nhãn khác lớp (IoU 0.58)
 [WARN ] POSSIBLE_WRONG_CLASS img_0112  model nói lớp 1 (conf 0.79), nhãn khác lớp (IoU 0.93)
 [WARN ] POSSIBLE_WRONG_CLASS img_0124  model nói lớp 0 (conf 0.93), nhãn khác lớp (IoU 0.97)
-[WARN ] POSSIBLE_WRONG_CLASS img_0124  model nói lớp 2 (conf 0.48), nhãn khác lớp (IoU 0.98)
 [WARN ] POSSIBLE_WRONG_CLASS img_0160  model nói lớp 2 (conf 0.78), nhãn khác lớp (IoU 0.95)
-[WARN ] POSSIBLE_WRONG_CLASS img_0180  model nói lớp 3 (conf 0.31), nhãn khác lớp (IoU 0.71)
 [WARN ] POSSIBLE_WRONG_CLASS img_0183  model nói lớp 1 (conf 0.91), nhãn khác lớp (IoU 0.94)
 [WARN ] POSSIBLE_WRONG_CLASS img_0185  model nói lớp 1 (conf 0.68), nhãn khác lớp (IoU 0.90)
 [WARN ] POSSIBLE_WRONG_CLASS img_0191  model nói lớp 1 (conf 0.91), nhãn khác lớp (IoU 0.95)
@@ -286,6 +166,6 @@ warn  BOX_HUGE               3
 warn  BOX_TINY               7
 warn  EMPTY_LABEL            15
 warn  POSSIBLE_FALSE_POS     24
-warn  POSSIBLE_LOOSE_BOX     46
-warn  POSSIBLE_MISSING       151
-warn  POSSIBLE_WRONG_CLASS   22
+warn  POSSIBLE_LOOSE_BOX     28
+warn  POSSIBLE_MISSING       53
+warn  POSSIBLE_WRONG_CLASS   18
