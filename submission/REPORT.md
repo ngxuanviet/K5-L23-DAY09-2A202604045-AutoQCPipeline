@@ -40,7 +40,18 @@ Kết quả đầy đủ ở `submission/calibration/calibration_report.md`.
 3. *Box lỏng nhẹ:* `POSSIBLE_LOOSE_BOX` trên calib chỉ đạt precision/recall 0,20 / 0,20 ở `conf` đã chọn, và v3 vẫn còn 20 cảnh báo loại này: phần lớn box lỏng không bị bắt.
 
 ## 5. Train: raw vs clean (tùy chọn, chấm riêng)
-Chưa chạy (phần tùy chọn, chưa dùng Colab/GPU). Chưa có `submission/results/`; không đưa ra kết luận về mAP.
+Train trên Colab T4: `yolo26n.pt`, 20 epoch, batch 16, imgsz 640, seed 0 và 1; cùng val (`gold_val`, 40 ảnh) và test (`data/test`, 100 ảnh, nhãn người). Chi tiết ở `submission/results/ANALYSIS.md`.
+
+| biến thể | #ảnh train | seed | mAP50 (TB ± độ lệch) | mAP50-95 | precision | recall |
+|---|---:|---:|---|---|---|---|
+| raw | 224 | 2 | 0.726 ± 0.000 | 0.512 ± 0.004 | 0.764 ± 0.061 | 0.649 ± 0.028 |
+| clean | 202 | 2 | 0.701 ± 0.025 | 0.487 ± 0.008 | 0.759 ± 0.003 | 0.625 ± 0.019 |
+
+Chênh mAP50 (clean − raw) = **−0,025**, xấp xỉ **một độ lệch chuẩn giữa các seed của clean** (0,025; hai seed clean là 0,718 và 0,683). Với 2 seed và test 100 ảnh, **không kết luận được** `clean` tốt hơn hay kém hơn `raw`; chỉ có thể nói `clean` không cho thấy cải thiện.
+
+Theo lớp (AP50 trung bình 2 seed, raw → clean): car 0,738 → 0,738; person 0,822 → 0,823; bus 0,695 → 0,703; **truck 0,648 → 0,538**. Toàn bộ chênh lệch nằm ở lớp truck (hiếm nhất: 32 box trong nhãn raw, 41/748 box trong clean), và dao động mạnh giữa hai seed của clean (0,590 vs 0,486).
+
+Giả thuyết: (1) `raw` bị thổi phồng vì 5 ảnh `LEAK_TEST` trùng với ảnh test và 12 ảnh trùng khác cùng nằm trong train, trong khi `clean` đã loại hết; (2) `clean` mất 22/224 ảnh, trong đó có ảnh chứa truck, nên lớp hiếm nhất chịu thiệt nhiều nhất; (3) `clean` vẫn còn 38 ảnh cảnh báo ngữ nghĩa chưa duyệt (nhãn máy, 18,8%), nên chưa phải "dữ liệu sạch" thật. Cách kiểm: huấn luyện lại `raw` sau khi bỏ 5 ảnh rò rỉ (so với `raw` gốc), và tăng số seed (≥ 5) để ước lượng nhiễu của truck.
 
 ## 6. Quyết định và ghi chú AI
 **(a) Quyết định cuối: Hold.** Dataset `clean_v1` là bản nháp, chưa được phát hành. Muốn thành Release cần ≤ 10% ảnh còn cảnh báo, tức ≤ 20/202: hiện 38, nên phải để người duyệt thêm **ít nhất khoảng 18 ảnh** trong 45 ảnh chưa duyệt (nâng ngân sách từ 80 lên ≥ 98), ưu tiên `POSSIBLE_FALSE_POS` và `POSSIBLE_LOOSE_BOX`. Hạ `conf` xuống 0,8 cũng cho Release (7,9%) nhưng đổi bằng việc bỏ sót thêm ảnh thiếu nhãn (recall `MISSING` 1,00 → 0,75): tôi không chọn cách đó.
